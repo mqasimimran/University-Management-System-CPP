@@ -16,7 +16,7 @@ public:
     }
 };
 
-// INHERITANCE: Student [cite: 43-57]
+// INHERITANCE: Student 
 class Student : public Person {
 private:
     vector<int> courseIds;
@@ -24,7 +24,7 @@ public:
     Student(const string& name) : Person(name) {}
     void addCourse(int courseId) { courseIds.push_back(courseId); }
     
-    // POLYMORPHISM: Method Overriding [cite: 19-20, 49]
+    // POLYMORPHISM: Method Overriding 
     void display() const override {
         Person::display();
         cout << "   Enrolled Course IDs: ";
@@ -41,7 +41,7 @@ public:
     Faculty(const string& name) : Person(name) {}
 };
 
-// AGGREGATION: Department [cite: 26-27, 62-76]
+// AGGREGATION: Department 
 class Department {
 private:
     string name;
@@ -88,7 +88,7 @@ public:
     }
 };
 
-// COMPOSITION Examples [cite: 24-25]
+// COMPOSITION Examples 
 class Building {
     string name;
 public:
@@ -98,7 +98,7 @@ public:
 
 class Classroom {
     int id;
-    Building building; // Composition [cite: 25]
+    Building building; // Composition 
 public:
     Classroom(int id, const Building& b) : id(id), building(b) {}
     void display() const {
